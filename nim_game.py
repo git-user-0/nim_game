@@ -1,12 +1,12 @@
 import time
 import random
 
-def compWins():
+def comp_wins():
     print()
     time.sleep(1)
     print('I was the first to reach 0. I win.')
 
-def playerChoice(number):
+def player_choice(number):
     while number > 0:
         time.sleep(1)
         print()
@@ -40,18 +40,18 @@ def playerChoice(number):
             print(number)
         else:
             print('The number you subtract must be 1 or 2.')
-    compWins()
+    comp_wins()
 
             
-playAgain = 'y'
+play_again = 'y'
 number = 0
-while playAgain.lower().startswith('y') == True:
+while play_again.lower().startswith('y') == True:
     time.sleep(1)
     print('Choose a start number which is greater than 6. ')
     number = int(input())
     if number>6:
         if number%3==0:
-            playerChoice(number)
+            player_choice(number)
         else:
             if number%3==1:
                 number-=1
@@ -60,7 +60,7 @@ while playAgain.lower().startswith('y') == True:
                 print('I have subtracted 1. The number is now:')
                 print()
                 print(number)
-                playerChoice(number)
+                player_choice(number)
             elif number%3==2:
                 number-=2
                 time.sleep(1)
@@ -68,11 +68,11 @@ while playAgain.lower().startswith('y') == True:
                 print('I have subtracted 2. The number is now:')
                 print()
                 print(number)
-                playerChoice(number)
+                player_choice(number)
     else:
         print()
         print('You must choose a number which is greater than 6.')
     time.sleep(1)
     print()
-    playAgain = input('Would you like to play again? Enter yes or no. ')
-    playAgain = playAgain.lower()
+    play_again = input('Would you like to play again? Enter yes or no. ')
+    play_again = play_again.lower()
